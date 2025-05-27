@@ -12,5 +12,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Make script executable
+        run: chmod +x weather.sh
+
       - name: Run Weather Script
         run: ./weather.sh ${{ secrets.OPEN_WEATHER_API_KEY }}
